@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import FetchPokemonData from "./fetchPokemonData";
+import "/src/styles.css";
 
 const pokemonArr = [
   { name: "pikachu" },
@@ -10,8 +11,10 @@ const pokemonArr = [
   { name: "venusaur" },
   { name: "blastoise" },
   { name: "mew" },
-  { name: "mewtwo" },
+  { name: "Mewtwo" },
   { name: "eevee" },
+  { name: "lucario" },
+  { name: "greninja" },
 ];
 
 function shuffle(arr) {
@@ -70,8 +73,8 @@ function Card({ handleScore }) {
           className="pokemon-card"
           onClick={() => handleClick(pokemon)}
         >
-          <h4>{pokemon.name + pokemon.name.slice(1)}</h4>
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+          <h4>{pokemon.name}</h4>
         </div>
       ))}
     </div>

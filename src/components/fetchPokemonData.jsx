@@ -7,13 +7,14 @@ export default async function FetchPokemonData(pokemonName) {
       throw new Error(`response not okay ${response.status}`);
     }
     const data = response.json();
-    console.log(data);
+    return data;
   } catch (err) {
     console.error(`error for ${pokemonName}: `, err);
 
     return {
       id: Math.random(),
       name: pokemonName,
+      sprites: { front_default: "" },
     };
   }
 }

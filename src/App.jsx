@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import FetchPokemonData from "./components/fetchPokemonData";
 import Card from "./components/card";
 import DisplayScore from "./components/displayScore";
+import "/src/styles.css";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -26,8 +26,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <h1>Pokemon</h1>
-        <DisplayScore score={score} bestScore={bestScore} />
+        <DisplayScore score={score} h2={"Pokemon"} bestScore={bestScore} />
       </header>
 
       <div className="pokemon-container">
